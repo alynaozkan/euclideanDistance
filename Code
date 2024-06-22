@@ -1,0 +1,17 @@
+import math
+
+points=[(3,4),(6,8),(7,12)]
+
+def euclideanDistance(dot1, dot2):
+    return math.sqrt((dot2[0] - dot1[0]) ** 2 + (dot2[1] - dot1[1]) ** 2)
+
+distances=[]
+for i in range(len(points)):
+  for j in range(i+1, len(points)):
+    distance= euclideanDistance(points[i], points[j])
+    distances.append(distance)
+
+min_distance = min(distances)
+print("Minimum distance:", min_distance)
+#for details
+print(distances)
